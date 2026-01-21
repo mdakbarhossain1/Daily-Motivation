@@ -141,3 +141,25 @@ h1{
   color: rgba(246,243,234,0.65);
   font-size: 0.9rem;
 }
+
+.btnSecondary{
+  appearance:none;
+  cursor:pointer;
+  padding: 10px 14px;
+  text-decoration: underline;
+  background: transparent;
+  border: none;
+  font-size: 11px;
+  border-radius: 14px;
+  font-weight: 400;
+  color: rgba(133, 133, 133, 0.9);
+  transition: transform .15s ease, background .15s ease;
+}
+
+.btnSecondary:hover{
+  transform: translateY(-1px);
+}
+
+.btnSecondary:active{
+  transform: translateY(0px) scale(0.98);
+}
