@@ -1,4 +1,4 @@
-const CACHE_NAME = "motivation-pwa-v1";
+const CACHE_NAME = "daily-ayah-pwa-v1";
 const urlsToCache = [
   "./",
   "./index.html",

@@ -1,49 +1,143 @@
-body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #2196f3, #21cbf3);
-  color: #fff;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+:root{
+  --bg1:#06261a;
+  --bg2:#0b3d2a;
+  --card:rgba(255,255,255,0.08);
+  --card2:rgba(255,255,255,0.12);
+  --text:#f6f3ea;
+  --muted:rgba(246,243,234,0.75);
+  --gold:#d8b77a;
+  --gold2:#c58a45;
+  --shadow: 0 18px 50px rgba(0,0,0,0.45);
 }
 
-.app {
-  text-align: center;
-  padding: 1rem;
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:22px;
+  color:var(--text);
+  font-family: "Hind Siliguri", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  /* Islamic vibes background */
+  background:
+    radial-gradient(900px 600px at 20% 15%, rgba(216,183,122,0.20), transparent 60%),
+    radial-gradient(800px 550px at 85% 80%, rgba(197,138,69,0.18), transparent 55%),
+    linear-gradient(135deg, var(--bg1), var(--bg2));
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+/* subtle geometric pattern */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:0.12;
+  background-image:
+    linear-gradient(45deg, rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(-45deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(circle at 30% 20%, black 0%, transparent 65%);
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 2rem;
-  max-width: 300px;
-  margin: auto;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+.app{
+  width:min(520px, 100%);
+  text-align:center;
 }
 
-.card p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+.header{
+  margin-bottom:16px;
 }
 
-.card button {
-  background: #fff;
-  color: #2196f3;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.2s;
+.badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:54px;
+  height:54px;
+  border-radius:16px;
+  background: linear-gradient(135deg, rgba(216,183,122,0.22), rgba(197,138,69,0.14));
+  border:1px solid rgba(216,183,122,0.35);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  font-size:20px;
+  color:var(--gold);
+  margin-bottom:10px;
 }
 
-.card button:hover {
-  transform: scale(1.05);
+h1{
+  margin: 0 0 6px 0;
+  font-size: 1.9rem;
+  letter-spacing: 0.3px;
+}
+
+.subtitle{
+  margin:0;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.card{
+  background: linear-gradient(180deg, var(--card), var(--card2));
+  border: 1px solid rgba(216,183,122,0.22);
+  border-radius: 22px;
+  padding: 22px 18px;
+  box-shadow: var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+
+/* top glow line */
+.card::before{
+  content:"";
+  position:absolute;
+  left:14px;
+  right:14px;
+  top:14px;
+  height:2px;
+  background: linear-gradient(90deg, transparent, rgba(216,183,122,0.8), transparent);
+  opacity:0.8;
+}
+
+.verse{
+  margin: 18px 0 12px 0;
+  font-size: 1.25rem;
+  line-height: 1.75;
+}
+
+.ref{
+  margin:0 0 16px 0;
+  color: rgba(216,183,122,0.95);
+  font-weight: 600;
+}
+
+.actions{
+  display:flex;
+  justify-content:center;
+  margin-top: 6px;
+}
+
+.btn{
+  appearance:none;
+  border:none;
+  cursor:pointer;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #0b1f16;
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+  transition: transform .15s ease, filter .15s ease;
+}
+
+.btn:hover{ transform: translateY(-1px) scale(1.02); }
+.btn:active{ transform: translateY(0px) scale(0.98); filter:saturate(1.1); }
+
+.footer{
+  margin-top: 14px;
+  color: rgba(246,243,234,0.65);
+  font-size: 0.9rem;
 }

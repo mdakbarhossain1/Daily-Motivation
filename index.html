@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Daily Motivation</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
+    <title>Daily Ayah • Islamic Vibes</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Optional: nicer Bangla font (works online; offline হলে fallback হবে) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="app">
-        <h1>💡 Daily Motivation</h1>
-        <div class="card">
-            <p id="quote">Loading...</p>
-            <button id="newQuote">New Quote</button>
-        </div>
-    </div>
+    <main class="app">
+        <header class="header">
+            <div class="badge">﷽</div>
+            <h1>আজকের আয়াত</h1>
+            <p class="subtitle">প্রতিদিন একটি শান্তির বার্তা 🌙</p>
+        </header>
+
+        <section class="card" aria-live="polite">
+            <p id="quote" class="verse">লোড হচ্ছে...</p>
+            <p id="ref" class="ref"></p>
+
+            <div class="actions">
+                <button id="newQuote" class="btn">নতুন আয়াত</button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <span>Developed By Akbar</span>
+        </footer>
+    </main>
 
     <script src="app.js"></script>
 </body>
