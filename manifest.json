@@ -1,0 +1,20 @@
+{
+  "name": "Daily Motivation",
+  "short_name": "Motivation",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#2196f3",
+  "theme_color": "#2196f3",
+  "icons": [
+    {
+      "src": "motivation-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "motivation-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
